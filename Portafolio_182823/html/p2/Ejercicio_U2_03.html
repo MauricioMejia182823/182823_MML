@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+    Nombre:Mauricio Mejia Lopez 
+    Materia: Programacion web 1
+    Fecha: 14/03/23
+    Descripcion: Etiquetas Multimedia
+-->
+<html lang="es">
+    <head>
+        <title>Unidad 02 Ejercicio 03</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Mauricio Mejia">
+        <meta name="revised" content="Martes 14 de Marzo de 2023">
+        <meta name="description" content="audio, video, source, iframe, address, small, cite, blockquote, time, sub, sup, var, kbd, code, samp, pre">
+    </head>
+    <body>
+        <hgroup>
+            <h1>Etiquetas multimedia</h1>
+            <video controls loop >
+                <source src="Multimedia/flower.webm">
+            </video>
+            <video controls autoplay>
+                <source src="Multimedia/movie.mp4">
+                <source src="Multimedia/movie.ogv">
+            </video>
+            <video controls autoplay>
+                <source src="Multimedia/friday.mp4">
+                <track src="Multimedia/friday.vtt">
+                <track src="Multimedia/friday.vtt" kind="subtitles" srclang="en" label="English">
+                <track src="Multimedia/friday.vtt" kind="subtitulos" srclang="es" label="Español">
+            </video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_N8hFAccfD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </hgroup>
+        <hgroup>
+            <h1>UPSLP</h1>
+            <iframe height="600px" width="800px" src="https://es.wikipedia.org/wiki/Wikipedia:Portada"></iframe>
+            <h2>YouTube</h2>
+            <iframe height="550px" width="315px" src="https://www.youtube.com/embed/_N8hFAccfD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <h3></h3>
+        </hgroup>
+        <hgroup>
+            <h1>Programacion web</h1>
+            <iframe height="600px" width="800px" src="file:///C:/Users/181591/Desktop/Parcial%202/ejercicio_u2_02.html"></iframe>
+        </hgroup>
+        <hgroup>
+            <h2>UPSLP</h2>
+           <ul>
+                <li>Aspirantes <a href="#1"><sup>[1]</sup></a></li>
+                <li>Alumnos<a href="#2"><sup>[2]</sup></a></li>
+                <li>Docentes<a href="#3"><sup>[3]</sup></a></li>
+                <li>Administracion<a href="#4"><sup>[4]</sup></a></li>
+           </ul>
+            <h1>Etiquetas para contenido especifico</h1>
+           Parrafo: <br><p>Urbano Villalón num.500, Col. La Ladrillera, San Luis Potosí, S.L.P. México, C.P. 78363 Conmutador: (444) 870 - 21 - 00 Atención Politécnica: politecnica@upslp.edu.mx</p>
+           Direccion: <br><address>Urbano Villalón num.500, Col. La Ladrillera, San Luis Potosí, S.L.P. México, C.P. 78363 Conmutador: (444) 870 - 21 - 00 Atención Politécnica: politecnica@upslp.edu.mx</address>
+           Pequeño:  <br><small>Urbano Villalón num.500, Col. La Ladrillera, San Luis Potosí, S.L.P. México, C.P. 78363 Conmutador: (444) 870 - 21 - 00 Atención Politécnica: politecnica@upslp.edu.mx</small>
+           <br>Cita:  <br><cite>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula viverra congue. Donec ullamcorper feugiat semper. Maecenas non accumsan tortor. Etiam a nisl vitae odio tempus lobortis. Suspendisse a malesuada dui, et imperdiet nisl. Nunc a nunc libero. Phasellus venenatis pulvinar turpis, at volutpat diam varius id. Ut mattis, arcu semper suscipit aliquet, urna velit cursus nibh, ac sollicitudin libero neque eget tellus. Praesent aliquet laoreet mi vel interdum.</cite>
+           <br>Bloque: <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula viverra congue. Donec ullamcorper feugiat semper. Maecenas non accumsan tortor. Etiam a nisl vitae odio tempus lobortis. Suspendisse a malesuada dui, et imperdiet nisl. Nunc a nunc libero. Phasellus venenatis pulvinar turpis, at volutpat diam varius id. Ut mattis, arcu semper suscipit aliquet, urna velit cursus nibh, ac sollicitudin libero neque eget tellus. Praesent aliquet laoreet mi vel interdum.</blockquote>
+           Resaltado:  <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula viverra congue. Donec ullamcorper feugiat semper. Maecenas non accumsan tortor. Etiam a nisl vitae odio tempus lobortis. Suspendisse a malesuada dui, et imperdiet nisl. <mark>Nunc a nunc libero. Phasellus venenatis pulvinar turpis, at volutpat diam varius id.</mark> Ut mattis, arcu semper suscipit aliquet, urna velit cursus nibh, ac sollicitudin libero neque eget tellus. Praesent aliquet laoreet mi vel interdum.
+           <br> Fecha: <br><cite>Lunes 13 de Marzo de 2023 <time>2023-03-13</time></cite>
+
+           Universidad Politecnica de San Luis Potosi<sup>UPSLP</sup><br>
+           Universidad Politecnica de San Luis Potosi<sub>UPSLP</sub>
+
+           
+           <h3>Referencias</h3>
+
+           <ol>
+             <li id="1">Aspirantes: <a  target="_blank" href="https://www.upslp.edu.mx/upslp/?page_id=244"><sub>https://www.upslp.edu.mx/upslp/?page_id=244</sub></a></li>
+                <li id="2">Alumnos: <a target="_blank" href="https://www.upslp.edu.mx/upslp/?page_id=209"><sub>https://www.upslp.edu.mx/upslp/?page_id=209</sub></a></li>
+                <li id="3">Docentes: <a  target="_blank" href="https://www.upslp.edu.mx/upslp/?page_id=231"><sub>https://www.upslp.edu.mx/upslp/?page_id=231</sub></a></li>
+                <li id="4">Administracion: <a target="_blank" href="https://www.upslp.edu.mx/upslp/?page_id=236"><sub>https://www.upslp.edu.mx/upslp/?page_id=236</sub></a></li>
+        </ol>
+        <h3>Otros Ejemplos</h3>
+        Relatividad: E=mc<sup>2</sup>
+       <br>Agua: H<sub>2</sub>O
+        <br>Glucosa: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>
+        <br>Sodio: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>1</sup>
+        <br>Variable: <var>i</var> = 25
+        <br>&nbsp;- Definicion de variables <var>x</var> = 3, <var>y</var> = 4
+        <br>Ejemplos basico de lenguaje C
+        <br><code>
+            for(int i= 0; i==0; i++){
+                printf("Hola %d",i);
+            }
+        </code>
+        <br>PHP info
+        <br><code>
+            &lt; ?php phpinfo(); ?&gt;
+        </code>
+        <br>Copiar: <kbd>ctrl + C</kbd>
+        <br>Pegar: <kbd>ctrl + V</kbd>
+        <br>Ejemplos basico de lenguaje C
+        <br><samp>
+            for(int i= 0; i==0; i++){
+                printf("Hola %d",i);
+            }
+        </samp>
+        <br>Ejemplos basico de lenguaje C
+        <br><pre>
+for(int i= 0; i==0; i++){
+    printf("Hola %d",i);
+}
+        </pre>
+        </hgroup>
+    </body>
+</html>
