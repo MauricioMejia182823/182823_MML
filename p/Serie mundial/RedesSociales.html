@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidad Virtual</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="menu container">
+                        <img class="logo-1" src="data:image/jpeg;base64,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" alt="">
+
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="menu.png" alt="" class="menu-icono">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="RedesSociales.html">REDES SOCIALES</a></li>         
+                       <li><a href="Actualidad.html">ACTUALIDAD</a></li>
+                        <li><a href="Informacion.html">INFORMACION</a></li>
+                        <li><a href="index.html">SERIE MUNDIAL</a></li>
+                    </ul>
+                    <div class="menu-2">
+                        <ul>
+                        <li><a href="Referencias.html">REFERENCIAS </a></li>
+                        <li><a href="Multimedia.html">MULTIMEDIA</a></li>
+
+                    </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <body>
+            <header>
+                <div class="header-content container">
+                    <div class="swiper mySwiper-1">
+                        <div class="swiper-wrapper">
+        
+                            <div class="swiper-slide">
+                                <div class="slider">
+                                    <div class="slider-txt">
+                                        <h1>Redes Sociales</h1>
+                                        <a href="https://twitter.com/MLBNetwork"><img src="https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/twitter_logo_blue.png.twimg.768.png"></a>
+                                        <a href="https://www.facebook.com/mlb/?locale=es_LA"><img src="https://www.facebook.com/images/fb_icon_325x325.png"></a>
+                                        <a href="https://www.youtube.com/channel/UCoLrcjPV5PbUrUyXq5mjc_A"><img src="https://img.freepik.com/iconos-gratis/youtube_318-183441.jpg?w=360"></a>
+                                        <a href="https://www.instagram.com/mlb/?hl=es-la"><img src="https://laazoteadecadiz.files.wordpress.com/2019/03/logo-instagram.png?w=736"></a>
+                                        <a href="https://www.mlb.com/live-stream-games"><img src="https://library.sportingnews.com/2022-02/mlb-tv-logo.jpeg"></a>
+
+                                         </div>
+                                    <div class="slider-img-3" >
+                                        <img  src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </header>
+            <blockquote>
+                <p>Ted william dijo alguna vez:<q>“El béisbol es el único campo o empresa en la que un hombre que triunfa tres de cada diez veces, es considerado un buen elemento”.</q></p>
+                </blockquote>
+            <footer class="nome">
+                <p>Mauricio Mejia Lopez/182823</p>
+                <p>Ing.Tecnologias de la Informacion(ITI)</p>
+                <p>Programacion Web I</p>
+            </footer>
+            </body>
+        
