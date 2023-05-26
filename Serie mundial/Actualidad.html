@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidad Virtual</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="menu container">
+                        <img class="logo-1" src="data:image/jpeg;base64,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" alt="">
+
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="menu.png" alt="" class="menu-icono">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="RedesSociales.html">REDES SOCIALES</a></li>          
+                      <li><a href="Actualidad.html">ACTUALIDAD</a></li>
+                        <li><a href="Informacion.html">INFORMACION</a></li>
+                        <li><a href="index.html">SERIE MUNDIAL</a></li>
+
+                    </ul>
+                    <div class="menu-2">
+                        <ul>
+                        <li><a href="Referencias.html">REFERENCIAS </a></li>
+                        <li><a href="Multimedia.html">MULTIMEDIA</a></li>
+
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <body>
+            <header>
+                <div class="header-content container">
+                    <div class="swiper mySwiper-1">
+                        <div class="swiper-wrapper">
+        
+                            <div class="swiper-slide">
+                                <div class="slider">
+                                    <div class="slider-txt">
+                                        <h1>ESTADO ACTUAL</h1>
+                                        <section>
+                                            <table>
+                                              <tr>
+                                                <th colspan="4" class="group-header">AL East</th>
+                                              </tr>
+                                              <tr>
+                                                  <th>Equipos</th>
+                                                  <th>G</th>
+                                                  <th>P</th>
+                                                  <th>%</th>
+                                                  <th>DIF</th>
+                                              </tr>
+                                              <tr>
+                                            <td><img src="https://midfield.mlbstatic.com/v1/team/139/spots/24"  class="team-logo"> <span class="team-name">TB</span></td>
+                                                <td>37</td>
+                                                <td>15</td>
+                                                <td>.712</td>
+                                                <td>-</td>
+                                              </tr>
+                                              <tr>
+                                                <td><img src="https://midfield.mlbstatic.com/v1/team/110/spots/24"  class="team-logo"> <span class="team-name">BAL</span></td>
+                                                <td>33</td>
+                                                <td>17</td>
+                                                <td>.660</td>
+                                                <td>3.0</td>
+                                              </tr>
+                                              <tr>
+                                                <td><img src="https://midfield.mlbstatic.com/v1/team/147/spots/24"  class="team-logo"> <span class="team-name">NYY</span></td>
+                                                <td>30</td>
+                                                <td>22</td>
+                                                <td>.577</td>
+                                                <td>7.0</td>
+                                              </tr>
+                                              <tr>
+                                                <td><img src="https://midfield.mlbstatic.com/v1/team/111/spots/24"  class="team-logo"> <span class="team-name">BOS</span></td>
+                                                <td>26</td>
+                                                <td>24</td>
+                                                <td>.520</td>
+                                                <td>10.0</td>
+                                              </tr>
+                                              <tr>
+                                                <td><img src="https://midfield.mlbstatic.com/v1/team/141/spots/24"  class="team-logo"> <span class="team-name">TOR</span></td>
+                                                <td>26</td>
+                                                <td>25</td>
+                                                <td>.510</td>
+                                                <td>10.5</td>
+                                              </tr>
+                                            </table>
+                                            <table>
+                                                <tr>
+                                                  <th colspan="4" class="group-header">AL Central</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Equipos</th>
+                                                    <th>G</th>
+                                                    <th>P</th>
+                                                    <th>%</th>
+                                                    <th>DIF</th>
+  
+                                                </tr>
+                                                <tr>
+                                              <td><img src="https://midfield.mlbstatic.com/v1/team/142/spots/24"  class="team-logo"> <span class="team-name">MIN</span></td>
+                                                  <td>26</td>
+                                                  <td>24</td>
+                                                  <td>.520</td>
+                                                  <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/116/spots/24"  class="team-logo"> <span class="team-name">DET</span></td>
+                                                  <td>23</td>
+                                                  <td>25</td>
+                                                  <td>.479</td>
+                                                  <td>2.0</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/114/spots/24"  class="team-logo"> <span class="team-name">CLE</span></td>
+                                                  <td>21</td>
+                                                  <td>28</td>
+                                                  <td>.429</td>
+                                                  <td>4.5</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/145/spots/24"  class="team-logo"> <span class="team-name">CWS</span></td>
+                                                  <td>21</td>
+                                                  <td>31</td>
+                                                  <td>.404</td>
+                                                  <td>6.0</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/118/spots/24"  class="team-logo"> <span class="team-name">KC</span></td>
+                                                  <td>15</td>
+                                                  <td>36</td>
+                                                  <td>.294</td>
+                                                  <td>11.5</td>
+                                                </tr>
+                                              </table>
+                                              <table>
+                                                <tr>
+                                                  <th colspan="4" class="group-header">AL West</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Equipos</th>
+                                                    <th>G</th>
+                                                    <th>P</th>
+                                                    <th>%</th>
+                                                    <th>DIF</th>
+  
+                                                </tr>
+                                                <tr>
+                                              <td><img src="https://midfield.mlbstatic.com/v1/team/140/spots/24"  class="team-logo"> <span class="team-name">TEX</span></td>
+                                                  <td>31</td>
+                                                  <td>18</td>
+                                                  <td>.633</td>
+                                                  <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/117/spots/24"  class="team-logo"> <span class="team-name">HOU</span></td>
+                                                  <td>28</td>
+                                                  <td>21</td>
+                                                  <td>.571</td>
+                                                  <td>3.0</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/108/spots/24"  class="team-logo"> <span class="team-name">LAA</span></td>
+                                                  <td>28</td>
+                                                  <td>23</td>
+                                                  <td>.549</td>
+                                                  <td>4.0</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/136/spots/24"  class="team-logo"> <span class="team-name">SEA</span></td>
+                                                  <td>25</td>
+                                                  <td>24</td>
+                                                  <td>.510</td>
+                                                  <td>6.0</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/133/spots/24"  class="team-logo"> <span class="team-name">OAK</span></td>
+                                                  <td>10</td>
+                                                  <td>41</td>
+                                                  <td>.196</td>
+                                                  <td>22.0</td>
+                                                </tr>
+                                              </table>
+                                          
+                                              <table>
+                                                <tr>
+                                                  <th colspan="4" class="group-header">NL East</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Equipos</th>
+                                                    <th>G</th>
+                                                    <th>P</th>
+                                                    <th>%</th>
+                                                    <th>DIF</th>
+  
+                                                </tr>
+                                                <tr>
+                                              <td><img src="https://midfield.mlbstatic.com/v1/team/144/spots/24"  class="team-logo"> <span class="team-name">ATL</span></td>
+                                                  <td>31</td>
+                                                  <td>19</td>
+                                                  <td>.620</td>
+                                                  <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/121/spots/24"  class="team-logo"> <span class="team-name">NYM</span></td>
+                                                  <td>26</td>
+                                                  <td>25</td>
+                                                  <td>.510</td>
+                                                  <td>5.5</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/146/spots/24"  class="team-logo"> <span class="team-name">MIA</span></td>
+                                                  <td>25</td>
+                                                  <td>26</td>
+                                                  <td>.490</td>
+                                                  <td>6.5</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/143/spots/24"  class="team-logo"> <span class="team-name">PHI</span></td>
+                                                  <td>23</td>
+                                                  <td>37</td>
+                                                  <td>.460</td>
+                                                  <td>8.0</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/120/spots/24"  class="team-logo"> <span class="team-name">WSH</span></td>
+                                                  <td>21</td>
+                                                  <td>29</td>
+                                                  <td>.460</td>
+                                                  <td>8.0</td>
+                                                </tr>
+                                              </table>
+                                          
+                                              <table>
+                                                <tr>
+                                                  <th colspan="4" class="group-header">NL Central</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Equipos</th>
+                                                    <th>G</th>
+                                                    <th>P</th>
+                                                    <th>%</th>
+                                                    <th>DIF</th>
+  
+                                                </tr>
+                                                <tr>
+                                              <td><img src="https://midfield.mlbstatic.com/v1/team/158/spots/24"  class="team-logo"> <span class="team-name">MIL</span></td>
+                                                  <td>27</td>
+                                                  <td>23</td>
+                                                  <td>.540</td>
+                                                  <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/134/spots/24"  class="team-logo"> <span class="team-name">PIT</span></td>
+                                                  <td>25</td>
+                                                  <td>24</td>
+                                                  <td>.510</td>
+                                                  <td>1.5</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/112/spots/24"  class="team-logo"> <span class="team-name">CHC</span></td>
+                                                  <td>22</td>
+                                                  <td>27</td>
+                                                  <td>.449</td>
+                                                  <td>4.5</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/138/spots/24"  class="team-logo"> <span class="team-name">STL</span></td>
+                                                  <td>23</td>
+                                                  <td>29</td>
+                                                  <td>.442</td>
+                                                  <td>5.0</td>
+                                                </tr>
+                                                <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/113/spots/24"  class="team-logo"> <span class="team-name">CIN</span></td>
+                                                  <td>21</td>
+                                                  <td>29</td>
+                                                  <td>.442</td>
+                                                  <td>5.O</td>
+                                                </tr>
+                                              </table>
+                                          <table>
+                                            <tr>
+                                                <table>
+                                                    <tr>
+                                                      <th colspan="4" class="group-header">NL West</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Equipos</th>
+                                                        <th>G</th>
+                                                        <th>P</th>
+                                                        <th>%</th>
+                                                        <th>DIF</th>
+      
+                                                    </tr>
+                                                    <tr>
+                                                  <td><img src="https://midfield.mlbstatic.com/v1/team/119/spots/24"  class="team-logo"> <span class="team-name">LAD</span></td>
+                                                      <td>31</td>
+                                                      <td>20</td>
+                                                      <td>.608</td>
+                                                      <td>-</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><img src="https://midfield.mlbstatic.com/v1/team/109/spots/24"  class="team-logo"> <span class="team-name">AZ</span></td>
+                                                      <td>29</td>
+                                                      <td>21</td>
+                                                      <td>.580</td>
+                                                      <td>1.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><img src="https://midfield.mlbstatic.com/v1/team/114/spots/24"  class="team-logo"> <span class="team-name">SF</span></td>
+                                                      <td>25</td>
+                                                      <td>25</td>
+                                                      <td>.500</td>
+                                                      <td>5.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><img src="https://midfield.mlbstatic.com/v1/team/135/spots/24"  class="team-logo"> <span class="team-name">SD</span></td>
+                                                      <td>23</td>
+                                                      <td>27</td>
+                                                      <td>.460</td>
+                                                      <td>7.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><img src="https://midfield.mlbstatic.com/v1/team/115/spots/24"  class="team-logo"> <span class="team-name">COL</span></td>
+                                                      <td>22</td>
+                                                      <td>29</td>
+                                                      <td>.431</td>
+                                                      <td>9.0</td>
+                                                    </tr>
+                                                  </table>
+                                          
+ 
+                                          </section>
+                                         </div>
+                                    <div class="slider-img-2">
+                                        <img src="https://www.mlbstatic.com/team-logos/league-on-dark/1.svg" alt="">
+                                    </div>
+                                </div>
+                                <section class="info container">
+                                    <div class="slider-img-2">
+                                        <img src="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/sixf3a6a4deekzhhcadl.jpg" alt="">
+                                    </div>
+                                    <div class="info-txt">
+                                        <h2>NOTICIAS</h2>
+                                        <h1>TITURALES</h1>
+
+                                        <h1><a href="https://www.mlb.com/es/news/a-un-out-de-la-derrota-padres-se-imponen-con-jonron-de-odor">A un out de la derrota, Padres se imponen con jonrón de Odor.</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/ofensiva-de-mets-respaldo-a-carrasco-para-evitar-la-barrida-en-chicago">Ofensiva de Mets respaldó a Carrasco para evitar barrida en Chicago.</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/gibson-y-hays-guiaron-victoria-de-orioles-sobre-los-yankees">Gibson y Hays guiaron victoria de Orioles sobre los Yankees.</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/vladimir-guerrero-jr-envia-pelota-firmada-al-jugador-de-posicion-que-lo-poncho">Vladdy envía pelota firmada al jugador de posición que lo ponchó.</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/gary-sanchez-fue-designado-para-asignacion-por-los-mets">Gary Sánchez fue designado para asignación por los Mets</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/yankees-subiran-a-vasquez-desde-triple-a-para-debut-el-viernes-vs-padres">Yankees subirán a Vásquez desde Triple-A para debut el viernes</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/clases-de-ingles-para-nada-este-prospecto-aprendio-el-idioma-gracias-al-rap">¿Clases de inglés? ¡Para nada! Este prospecto aprendió gracias al rap</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/poco-probable-regreso-de-machado-este-fin-de-semana-ante-yankees">Poco probable regreso de Machado este fin de semana ante Yankees</a></h1>
+                                        <h1><a href="https://www.mlb.com/es/news/rays-sentencian-a-los-azulejos-con-siete-bases-robadas">Rays sentencian a los Azulejos, ¡con SIETE bases robadas!</a></h1>
+
+                                   
+                                    </div>
+                                </section>
+                               <h1>Mapa Equipos MLB</h1> 
+                               <img src="Mapabeis.jpg" alt="" usemap="#mlb">
+                               <map name="mlb">
+                                <area shape="rect" coords="110,131,168,179" href="https://www.mlb.com/mariners" alt="">
+                                <area shape="rect" coords="10,330,68,368" href="https://www.mlb.com/giants" alt="">
+                                <area shape="rect" coords="79,367,134,416" href="https://www.mlb.com/athletics" alt="">
+                                <area shape="rect" coords="36,444,90,494" href="https://www.mlb.com/es/dodgers" alt="">
+                                <area shape="rect" coords="115,441,168,489" href="https://www.mlb.com/es/angels" alt="">
+                                <area shape="rect" coords="82,508,132,559" href="https://www.mlb.com/es/padres" alt="">
+                                <area shape="rect" coords="190,469,251,527" href="https://www.mlb.com/es/dbacks" alt="">
+                                <area shape="rect" coords="325,508,378,360" href="https://www.mlb.com/es/rockies" alt="">
+                                <area shape="rect" coords="406,515,466,568" href="https://www.mlb.com/es/rangers" alt="">
+                                <area shape="rect" coords="445,501,498,636" href="https://www.mlb.com/es/astros" alt="">
+                                <area shape="rect" coords="447,354,509,409" href="https://www.mlb.com/es/royals" alt="">
+                                <area shape="rect" coords="479,172,533,225" href="https://www.mlb.com/es/twins" alt="">
+                                <area shape="rect" coords="552,285,604,331" href="https://www.mlb.com/es/cubs" alt="">
+                                <area shape="rect" coords="535,376,593,429" href="https://www.mlb.com/cardinals" alt="">
+                                <area shape="rect" coords="637,239,689,286" href="https://www.mlb.com/es/tigers" alt="">
+                                <area shape="rect" coords="600,333,651,381" href="https://www.mlb.com/es/whitesox" alt="">
+                                <area shape="rect" coords="696,612,760,655" href="https://www.mlb.com/es/rays" alt="">
+                                <area shape="rect" coords="810,628,866,681" href="https://www.mlb.com/es/marlins" alt="">
+                                <area shape="rect" coords="666,301,715,349" href="https://www.mlb.com/es/guardians" alt="">
+                                <area shape="rect" coords="666,373,726,417" href="https://www.mlb.com/es/reds" alt="">
+                                <area shape="rect" coords="700,176,754,227" href="https://www.mlb.com/es/bluejays" alt="">
+                                <area shape="rect" coords="719,278,767,326" href="https://www.mlb.com/es/pirates" alt="">
+                                <area shape="rect" coords="745,339,799,385" href="https://www.mlb.com/es/nationals" alt="">
+                                <area shape="rect" coords="771,259,829,306" href="https://www.mlb.com/es/phillies" alt="">
+                                <area shape="rect" coords="810,208,865,249" href="https://www.mlb.com/es/yankees" alt="">
+                                <area shape="rect" coords="882,264,937,311" href="https://www.mlb.com/es/mets" alt="">
+                                <area shape="rect" coords="835,314,887,364" href="https://www.mlb.com/es/orioles" alt="">
+                                <area shape="rect" coords="875,167,937,219" href=" https://www.mlb.com/es/redsox" alt="">
+                                <area shape="rect" coords="677,490,732,543" href="https://www.mlb.com/braves" alt="">
+                                <area shape="rect" coords="562,224,616,272" href="https://www.mlb.com/es/brewers" alt="">
+
+
+
+                               </map>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </header>
+            <blockquote>
+                <p>Derek Jeter dijo alguna vez:<q>“Puede haber personas que tengan más talento que tú, pero no hay excusa para que alguien trabaje más duro de lo que tú puedas trabajar.”</q></p>
+                </blockquote>
+            <footer class="nome">
+                <p>Mauricio Mejia Lopez/182823</p>
+                <p>Ing.Tecnologias de la Informacion(ITI)</p>
+                <p>Programacion Web I</p>
+            </footer>
+        </body>

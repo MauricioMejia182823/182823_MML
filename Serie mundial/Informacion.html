@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidad Virtual</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="menu container">
+         <img class="logo-1" src="data:image/jpeg;base64,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" alt="">
+
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="menu.png" alt="" class="menu-icono">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="RedesSociales.html">REDES SOCIALES</a></li>
+                        <li><a href="Actualidad.html">ACTUALIDAD</a></li>
+                        <li><a href="Informacion.html">INFORMACION</a></li>
+                        <li><a href="index.html">SERIE MUNDIAL</a></li>
+
+                    </ul>
+                    <div class="menu-2">
+                        <ul>
+                        <li><a href="Referencias.html">REFERENCIAS </a></li>
+                        <li><a href="Multimedia.html">MULTIMEDIA</a></li>
+
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <body>
+            <header>
+                <div class="header-content container">
+                    <div class="swiper mySwiper-1">
+                        <div class="swiper-wrapper">
+        
+                            <div class="swiper-slide">
+                                <div class="slider">
+                                    <div class="slider-txt">
+                                        <h1>ORIGEN</h1>
+                                        <div id="columnas">
+                                            <p>
+                                                <li> La razón detrás del nombre es gracias a Barney Dreyfuss, quien era el dueño de los Pittsburgh Pirates. En 1903, le escribió al dueño de los Boston Red Sox desafiándolos a una "Serie de Campeonato Mundial". Los Piratas eran el mejor equipo de la Liga Nacional y los Medias Rojas eran los mejores de la Liga Americana.</li> 
+                                                <li>A partir de ese momento, y con excepción de los años 1904 y 1994, se ha disputado la Serie Mundial entre los ganadores de cada liga. En 1904 no se celebró debido al boicot del presidente de los New York Giants a los Boston Americans.</li> 
+                                                <li>En 1994 tampoco se disputó la Serie Mundial, esta vez debido a que hubo huelga de peloteros desde el 12 de agosto de 1995 hasta el 2 de abril de 1995. Son las únicas dos veces que no se ha disputado el famoso 'Clásico de otoño'.</li> 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slider-img">
+                                        <img src="https://cdn.septimaentrada.com/uploads/media/2022/02/25/en-que-ano-se-invento-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </header>
+            <section class="info container">
+                <div class="slider-img-2">
+                    <img src="https://asisejuega.com/wp-content/uploads/2021/05/Historia-del-beisbol.jpg" alt="">
+                </div>
+                <div class="info-txt">
+                    <h2>Antecedentes</h2>
+                    <p>El nombre dado a la Serie de 1903 fue Serie de Campeonato Mundial (World's Championship Series) fue una serie de ocho partidos entre los Pittsburgh Pirates, de la Liga Nacional y los Boston Americans (después conocidos como Red Sox) de la Liga Americana, ganando el equipo de Boston 5 a 3, más adelante la serie fue conocida como Serie del Mundo (World's Series) y posteriormente Serie Mundial (World Series).</p>
+                    <p>En 1904 el dueño del equipo campeón de la Liga Nacional (New York Giants), John T. Brush, se negó a participar aduciendo una diferencia muy grande de nivel entre las dos ligas (a pesar de que la Liga Americana había ganado la anterior edición del evento). Pero para 1905 propuso reglas que permitirían disputar el certamen a partir del año siguiente. La primera regla consiste en que los jugadores recibirán pago solo durante los cuatro primeros juegos de la Serie, de esa manera no habría interés en prolongar la serie más allá de lo necesario. La segunda es que la administración del evento la haría la organización de las Grandes Ligas y no los clubes. Estas reglas aun se conocen como las Reglas Brush.</p> 
+                    <p>En 1925, se adoptó la secuencia de juegos 2-3-2, es decir, un equipo recibe los dos primeros juegos, su contrincante los tres siguientes y el primer equipo los dos últimos. Hasta los comienzos de la década 2000 la secuencia de 2-3-2 se alternaba por año entre liga pero después se impuso una regla que la liga ganadora del Juego De Estrellas en julio de cada año tiene la ventaja de la Secuencia.</p>
+                <p>En 1994 no hubo Serie Mundial debido a una huelga de peloteros.
+                 En el 2000, la final de la Serie Mundial se disputó entre los dos equipos de Nueva York, los Mets y los Yankees, obteniendo estos últimos el gran triunfo y dándose por primera vez en un siglo la anhelada "Serie del Tren" o "Subway Series".
+                La Serie Mundial de 2001 la ganaron los Arizona Diamondbacks a los New York Yankees 4 juegos a 3, poniendo fin a la dinastía de Nueva York en los últimos 5 años. Este fue considerada como una de las mejores Series Mundiales de todos los tiempos.
+                La Serie Mundial de 2004 la ganaron los Boston Red Sox a los Cardinals de Saint Louis 4 juegos a 0, terminando así la tan llamada "Maldición del Bambino" después de 86 años.
+                La Serie Mundial de 2005 la ganaron los Chicago White Sox a los Astros de Houston 4 juegos a 0, terminando así la tan llamada "Maldición de los Medias Negras" después de 88 años.
+                La Serie Mundial de 2009 la ganaron los New York Yankees a los Philadelphia Phillies 4 juegos a 2, obteniendo así el más reciente título número 27.
+                La Serie Mundial de 2010 la ganaron los San Francisco Giants en su primera aparición desde el 2002 a los Texas Rangers 4 juegos a 1, recibiendoles el primer título para la organización desde 1954.</p>
+                </div>
+            </section>
+            <section class="info container">
+
+            <div class="info-txt">
+                <h2>Historia</h2>
+                <h1>Mayores ganadores de la serie mundial</h1>
+                <ol start="1"> 
+                <li>1.New York Yankees (27)</li>
+                <li>2.St. Louis Cardinals (11)</li>
+                <li>3.Oakland Athletics (9)</li>
+                <li>4.San Francisco Giants (8)</li>
+                <li>5.Los Ángeles Dodgers (7)</li>
+                <li>6.Cincinnati Reds (5)</li>
+                <li>7.Pittsburgh Pirates(5)</li>
+                <li>8.Atlanta Braves(4)</li>
+                <li>9.Chicago Cubs(3)</li>
+                <li>10.Philadelphia Phillies(2)</li>
+
+            </ol>
+            </div>
+            </section>
+            <div class="slider-img-2">
+                <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/10/14/15710756102550.jpg" alt="">
+            </div>
+            <div class="info-txt">
+                <h2>Objetivo</h2>
+                <h1>Preguntas del tema...</h1>
+                <details>
+                    <summary class="sumary">¿Cuando comienza la serie mundial de 2023?</summary>
+                <p>Clásico Mundial de Béisbol 2023: calendario completo y cómo ver en vivo. Algunas de las mayores estrellas de las Grandes Ligas de Béisbol, como Shohei Ohtani y Mike Trout, se darán cita del 8 al 21 de marzo en la nueva edición del torneo global de béisbol.</p>
+            </details>            
+            <details>
+            <summary class="sumary">¿Que equipos juegan la serie mundial de 2023?</summary>
+            <p>El Clásico Mundial de Béisbol 2023 (WBC, por sus siglas en inglés World Baseball Classic) tendrá lugar del 8 al 21 de marzo de 2023, y en él participarán Cuba, Panamá, México, Colombia, Puerto Rico, Venezuela, República Dominicana y Nicaragua como equipos latinos.</p>
+            </details>            
+            <details>
+            <summary class="sumary">¿Porque se llama serie mundial de beisbol?</summary>
+             <p>Se dice que las Series Mundiales se llamaron originalmente "Series Mundiales" después de que el periódico New York World decidiera patrocinar el partido. Sin embargo, esta versión es controvertida, ya que algunos afirman que sólo se promocionaba como "World's Championship Series" o "World's Series" para abreviar</p>
+            </details>
+            <details>
+            <summary class="sumary">¿Que equipo a ganado mas juego de la mlb?</summary>
+            <p>Con 116 victorias en el 2001, los Marineros igualaron el récord de más victorias en una temporada de 162 juegos, impuesto más de 100 años atrás, por los Cachorros de 1906.</p>
+            </details>            
+            <details>
+            <summary class="sumary">¿Cual es el equipo de beisbol mas famoso del mundo?</summary>
+            <p>Los Yankees han sido el equipo mejor valorado de la MLB todos los años desde que se publicó la lista por primera vez en diciembre de 1998</p>
+            </details>            
+            <details>
+            <summary class="sumary">¿Cual es el record de la mlb?</summary>
+             <p>Los 36 triples de Chief Wilson en 1912.Los 14 triples de Charlie Blackmon, el jardinero central de los Rockies, fueron la mayor cantidad en ambas ligas en el 2017, año en el que se batearon menos triples que nunca antes en la historia Grandes Ligas. Nadie bateó más de ocho triples en 2021.</p>
+            </details>            
+            <details>
+            <summary class="sumary">¿Cual es el mejor equipo de beisbol de latinoamerica?</summary>
+            <p>que se disputó en miami águilas cibaeñas han logrado a lo largo de la historia unos 20 títulos nacionales y. 5 series del. caribe. en el puesto número 1 tenemos a los tigres del licey es un equipo de la liga de béisbol profesional de la república dominicana.</p>
+            </details>            
+            </div>
+            <blockquote>
+                <p>Bob Feller dijo alguna vez:<q>“Cada día es una nueva oportunidad. Puedes construir sobre el éxito de ayer o poner tus fracasos en el pasado y empezar de nuevo. Así es la vida, con un nuevo juego cada día y así es el béisbol.”</q></p>
+                </blockquote>
+            <footer class="nome">
+                <p>Mauricio Mejia Lopez/182823</p>
+                <p>Ing.Tecnologias de la Informacion(ITI)</p>
+                <p>Programacion Web I</p>
+            </footer>
+
+            
+        </body>
+</html>
